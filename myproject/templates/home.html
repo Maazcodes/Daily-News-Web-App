@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock title %}
+{% block style %}
+.card img{
+    height: 280px;
+    width: 350px;
+}
+
+.card-body{
+    
+}
+{% endblock style %}
+{% block content %}
+{% load static %}
+<h3 class="text-center my-3 py-3">Daily News</h3>
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card border-primary" style="width: 22rem; ">
+                <img src="{% static 'myapp/sports_image.jpg' %}" class="card-img-top rounded" alt="Sports Image">
+                <div class="card-body text-center">
+                    <a role="button" class="btn btn-outline-success " href="{% url 'news' 'sports' %}">Sports</a> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card border-primary" style="width: 22rem;">
+                <img src="{% static 'myapp/entertainment_image.jpg' %}" class="card-img-top rounded" alt="Entertainment Image">
+                <div class="card-body text-center">
+                    <a role="button" class="btn btn-outline-success" href="{% url 'news' 'entertainment' %}">Entertainment</a> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-primary" style="width: 22rem;">
+                <img src="{% static 'myapp/science_image.jpg' %}" class="card-img-top rounded" alt="Science Image">
+                <div class="card-body text-center">
+                    <a role="button" class="btn btn-outline-success" href="{% url 'news' 'science' %}">Science</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card border-primary" style="width: 22rem;">
+                <img src="{% static 'myapp/business_image.jpg' %}" class="card-img-top rounded" alt="Business Image">
+                <div class="card-body text-center">
+                    <a role="button" class="btn btn-outline-success" href="{% url 'news' 'business' %}">Business</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-primary" style="width: 22rem;">
+                <img src="{% static 'myapp/technology_image.jpg' %}" class="card-img-top rounded" alt="Technology Image">
+                <div class="card-body text-center">
+                    <a role="button" class="btn btn-outline-success" href="{% url 'news' 'technology' %}">Technology</a> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-primary" style="width: 22rem;">
+                <img src="{% static 'myapp/health_image.png' %}" class="card-img-top rounded" alt="Health Image">
+                <div class="card-body text-center">
+                    <a role="button" class="btn btn-outline-success" href="{% url 'news' 'health' %}">Health</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    {% for i, j, k in my_content %}
+        <h5>{{i}} </h5>
+        <h5>{{j}} </h5>
+        <h5>{{k}} </h5>
+    {% endfor %}
+</div> -->
+
+{% endblock content%}

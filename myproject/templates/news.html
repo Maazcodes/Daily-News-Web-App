@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} {{category|capfirst}} News {% endblock title %}
+
+{% block content %}
+
+<h4 class="text-center my-4">{{category|capfirst}} News</h4>
+<div class=" mt-5" >
+    {% for title, content, url_to_image, url in sports_titles %}
+    <div class=" card mb-4 border-dark" style="width: 40rem; margin-left: auto; margin-right: auto;">
+        {% if url_to_image %}
+        <img src="{{url_to_image}}" style="height: 250px;" class="card-img-top rounded" alt="{{category|capfirst}} Image">
+        {% else %}
+        <div class=" text-center mt-2">No Image Available</div>
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          {% if content %}
+          <p class="card-text">{{content|slice:200}}</p>
+          {% else %}
+          <div class="text-center my-2">No Content Available</div>
+          {% endif %}
+          <a href="{{url}}" role="button" target="_blank" style="margin-left: 245px;" class="btn btn-primary ">Read more</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
