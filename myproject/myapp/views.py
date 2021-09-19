@@ -7,11 +7,8 @@ from decouple import config
 
 
 def home(request):
-    d = {'articles':[{'title':"news title", 'description':"news description", 'content':"news content"}, {'title':"news title2", 'description':"news description2", 'content':"news content2"}, {'title':"news title3", 'description':"news description3", 'content':"news content3"}]}
-    main_content = d['articles']
-    titles = [(i['title'], i['description'], i['content']) for i in main_content]
-    my_context = {'my_content':titles}
-    return render(request, 'home.html', my_context)
+   
+    return render(request, 'home.html')
 
 def news(request, news_category):
     try:
