@@ -4,3 +4,10 @@
 - It displays news of categories like sports, technology, health, science, business, entertainment, etc.
 - I have not used database tables in this project.
 - I have used mainly bootstrap to enhance front end features of this mini project.
+
+## How to install in local environment
+
+- Create virtual environment in 
+```
+
+```
