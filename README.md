@@ -18,11 +18,11 @@
 ### Build Docker image
 
 ```
-docker build -t newsapp:news .
+docker build -t <image_name> .
 ```
 
 ### Run the container
 
 ```
-docker run newsapp:news
+docker run --network host -d <image_name>
 ```
