@@ -8,21 +8,4 @@
 - It displays news of categories like sports, technology, health, science, business, entertainment, etc.
 - Used Bootstrap to enhance front end features.
 
-## How to install in local environment
 
-- Get News API key from this website: https://newsapi.org/
-- Create a new file called: `.env` in `myproject` folder (outer)
-- Write this content in .env file- `API_KEY='<your-api-key>'`
-- Be in the same directory and run the following command: 
-
-### Build Docker image
-
-```
-docker build -t <image_name> .
-```
-
-### Run the container
-
-```
-docker run --network host -d <image_name>
-```
