@@ -25,7 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['daily-us-news.onrender.com']
+
+# ALLOWED_HOSTS = ['daily-us-news.onrender.com']
+
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "maazdevops.pythonanywhere.com", 'daily-us-news.onrender.com']
 
 
 # Application definition
@@ -129,5 +132,5 @@ import os
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-import django_heroku
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
